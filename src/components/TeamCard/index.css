@@ -1,4 +1,7 @@
 /* Write your CSS here */
+.link-style {
+  text-decoration: none;
+}
 .list-item-style {
   display: flex;
   flex-direction: row;
