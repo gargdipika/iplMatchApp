@@ -1,0 +1,25 @@
+/* Write your CSS here */
+.list-item-style {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  background-color: transparent;
+  border: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #ffffff;
+  width: 40vw;
+  padding: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.image-team-card {
+  width: 100px;
+  height: 150px;
+  margin-right: 20px;
+}
+.title-team-card {
+  color: white;
+  font-family: 'Bree Serif';
+}
