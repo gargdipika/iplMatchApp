@@ -23,6 +23,7 @@ class TeamMatches extends Component {
     const {match} = this.props
     const {params} = match
     const {id} = params
+    console.log(id)
     const response = await fetch(`https://apis.ccbp.in/ipl/${id}`)
     const data = await response.json()
 
@@ -68,7 +69,45 @@ class TeamMatches extends Component {
     })
   }
 
+  getClassNameForBackground = () => {
+    const {match} = this.props
+    const {params} = match
+    const {id} = params
+    let background = ''
+    switch (id) {
+      case 'RCB':
+        background = 'rcb'
+        break
+      case 'KKR':
+        background = 'kkr'
+        break
+      case 'KXP':
+        background = 'kxp'
+        break
+      case 'CSK':
+        background = 'csk'
+        break
+      case 'RR':
+        background = 'rr'
+        break
+      case 'MI':
+        background = 'mi'
+        break
+      case 'DC':
+        background = 'dc'
+        break
+      case 'SH':
+        background = 'sh'
+        break
+      default:
+        background = ''
+        break
+    }
+    return background
+  }
+
   render() {
+    const backgroundStyle = this.getClassNameForBackground()
     const {
       latestMatchDetail,
       recentMatches,
@@ -77,13 +116,13 @@ class TeamMatches extends Component {
     } = this.state
 
     return (
-      <div className="ipl-dashboard-container">
+      <div className={`ipl-dashboard-container ${backgroundStyle}`}>
         {isLoading ? (
           <div testid="loader">
             <Loader type="Oval" color="#ffffff" height={50} width={50} />
           </div>
         ) : (
-          <div className="ipl-dashboard-container">
+          <div className={`ipl-dashboard-container ${backgroundStyle}`}>
             <img
               className="banner-style"
               alt="team banner"
