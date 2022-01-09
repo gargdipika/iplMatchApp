@@ -33,7 +33,7 @@
   color: #18ed66;
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 700px) {
   .match-list-container {
     width: 34vw;
   }

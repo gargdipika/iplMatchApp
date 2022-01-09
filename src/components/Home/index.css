@@ -28,7 +28,7 @@
   align-items: center;
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 700px) {
   .heading {
     font-size: 40px;
   }

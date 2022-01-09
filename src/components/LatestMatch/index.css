@@ -21,7 +21,7 @@
 .para {
   font-size: 15px;
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 700px) {
   .latest-match-detail-container {
     flex-wrap: wrap;
     justify-content: space-between;

@@ -77,7 +77,7 @@ class TeamMatches extends Component {
     } = this.state
 
     return (
-      <div>
+      <div className="ipl-dashboard-container">
         {isLoading ? (
           <div testid="loader">
             <Loader type="Oval" color="#ffffff" height={50} width={50} />

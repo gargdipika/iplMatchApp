@@ -27,7 +27,7 @@
   font-family: 'Bree Serif';
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 700px) {
   .image-team-card {
     width: 40px;
     height: 70px;
