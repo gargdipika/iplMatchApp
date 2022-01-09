@@ -1,1 +1,19 @@
 /* Write your CSS here */
+.latest-match-detail-container {
+  display: flex;
+  background-color: #1e293b;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.image-latest-match-competitor {
+  height: 150px;
+  width: 150px;
+  margin: 20px;
+}
+.heading-style-latest-match {
+  font-size: 25px;
+  font-weight: normal;
+}
