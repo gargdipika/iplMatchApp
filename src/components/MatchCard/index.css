@@ -1,1 +1,44 @@
 /* Write your CSS here */
+.match-list-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e293b;
+  width: 18vw;
+  height: 400px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.image-match-card {
+  height: 130px;
+  width: 110px;
+}
+
+.heading-match-card-one {
+  font-size: 20px;
+  text-align: center;
+}
+.discreption-style {
+  text-align: center;
+}
+.red-style {
+  color: #e31a1a;
+}
+.green-style {
+  color: #18ed66;
+}
+
+@media screen and (max-height: 768px) {
+  .match-list-container {
+    width: 34vw;
+  }
+  .image-match-card {
+    height: 80px;
+    width: 80px;
+  }
+}

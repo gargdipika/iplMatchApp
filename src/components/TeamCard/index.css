@@ -26,3 +26,17 @@
   color: white;
   font-family: 'Bree Serif';
 }
+
+@media screen and (max-height: 768px) {
+  .image-team-card {
+    width: 40px;
+    height: 70px;
+  }
+  .title-team-card {
+    font-size: 10px;
+  }
+  .list-item-style {
+    margin-left: 10px;
+    width: 35vw;
+  }
+}

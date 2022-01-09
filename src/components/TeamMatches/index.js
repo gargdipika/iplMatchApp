@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner'
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import LatestMatch from '../LatestMatch'
+import MatchCard from '../MatchCard'
 import './index.css'
 
 class TeamMatches extends Component {
@@ -15,7 +16,6 @@ class TeamMatches extends Component {
   }
 
   componentDidMount() {
-    console.log('running')
     this.getDataFromUrl()
   }
 
@@ -31,7 +31,7 @@ class TeamMatches extends Component {
       recentMatches: data.recent_matches,
       teamBannerUrl: data.team_banner_url,
     }
-
+    console.log(updatedData)
     const {latestMatchDetails, recentMatches, teamBannerUrl} = updatedData
     const updatedLatestMatchDetails = {
       competingTeam: latestMatchDetails.competing_team,
@@ -75,20 +75,30 @@ class TeamMatches extends Component {
       teamBannerUrl,
       isLoading,
     } = this.state
-    console.log(latestMatchDetail)
-    console.log(recentMatches)
 
     return (
-      <div className="ipl-dashboard-container">
+      <div>
         {isLoading ? (
-          <div>
+          <div testid="loader">
             <Loader type="Oval" color="#ffffff" height={50} width={50} />
           </div>
         ) : (
-          <div>
-            <img alt="team banner" src={teamBannerUrl} />
-            <p>Latest Matches</p>
+          <div className="ipl-dashboard-container">
+            <img
+              className="banner-style"
+              alt="team banner"
+              src={teamBannerUrl}
+            />
+            <div className="heading-container-one">
+              <h1 className="heading-match">Latest Matches</h1>
+            </div>
+
             <LatestMatch latestMatchDetail={latestMatchDetail} />
+            <ul className="all-match-list-container-one">
+              {recentMatches.map(matchDetail => (
+                <MatchCard key={matchDetail.id} matchDetail={matchDetail} />
+              ))}
+            </ul>
           </div>
         )}
       </div>

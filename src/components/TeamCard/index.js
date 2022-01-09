@@ -10,7 +10,7 @@ const TeamCard = props => {
     <Link className="link-style" to={`/team-matches/${id}`}>
       <li className="list-item-style">
         <img className="image-team-card" alt={name} src={teamImageUrl} />
-        <h1 className="title-team-card">{name}</h1>
+        <p className="title-team-card">{name}</p>
       </li>
     </Link>
   )
